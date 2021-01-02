@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//mecanismo para volver el codigo de una funcion iterable
+        function* iterable(){
+
+           yield "hola mundo";
+
+           console.log("hola mundo consola");
+
+           yield "hola 2";
+
+           console.log("seguimos con mas instrucciones de nuestro codigo");
+
+           yield "hola 3";
+
+           yield "hola 4";
+
+        }
+
+        let iterador = iterable();
+
+        for (let y of iterador) {
+            console.log(y);
+        }
+
+        const arreglo = [...iterable()];
+
+        console.log(arreglo);
+
+
+        function cua (valor){
+
+            setTimeout(() => {
+               return console.log({valor,result: valor * valor}) 
+            }, Math.random() * 1000);
+
+          
+        }
+
+        function* generador (){
+            console.log("inicia generator");
+            yield cua(0);
+            yield cua(1);
+            yield cua(2);
+            yield cua(3);
+            yield cua(4);
+            yield cua(5);
+            console.log("termina generador");
+        }
+
+        let gen = generador();
+
+        for (let yi of gen) {
+            console.log(yi);
+        }
+
+
+    </script>
+</body>
+</html>

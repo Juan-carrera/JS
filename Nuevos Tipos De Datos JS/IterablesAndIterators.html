@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+
+        //tipos de datos iterables
+        //cadenas,arrays,map,set
+
+        const iterable = [1,2,3,4,5];
+
+        //accedemos al iterador del iterable
+        const iterador = iterable[Symbol.iterator]();
+
+        console.log(iterable);
+        console.log(iterador);
+
+
+        let next = iterador.next();
+
+        while(!next.done)
+        {
+            console.log(next.value);
+            next = iterador.next();
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Una función es un fragmento de código que puede ser llamado por otro código o por sí mismo, o por una variable que haga referencia a la función. Cuando se llama a una función, los argumentos se pasan a la función como entrada, y la función puede devolver opcionalmente una salida. Una función en JavaScript es también un objeto.
+
+        El nombre de la función es un identificador declarado como parte de una declaración de función o expresión de función. El ámbito de la función depende de si el nombre de la función es una declaración o una expresión. */
+
+        //funcion declarada
+
+            function estoEsUnaFuncion()
+            {
+            console.log("uno");
+            console.log("dos");
+            }
+
+            //invocacion de funcion
+
+            estoEsUnaFuncion();
+
+
+            function saludar (nombre,edad)
+            {   
+                console.log(`hola mi nombre es ${nombre} y mi edad es ${edad}`);
+
+            }
+
+            saludar("juan antonio",23);
+
+            // funciones declaradas vs funciones expresadas
+
+            function funcionDeclarada()
+            {
+                console.log("esto es una funcion declarada,puede invocarse en cualquier parte de nuestro codigo,incluso antes de que la funcion sea declarada");
+
+            }
+
+            funcionDeclarada();
+
+
+            //funcion anonima
+            funcionExpresada();
+
+            const funcionExpresada = function (){
+            console.log ("esto es una funcion expresada,una funcion que se la ha asignado como valor una variable,si invocamos esta funcion antes de su definicion,que nos dira JS...");
+
+            }
+
+            //Una función nombrada es una función con nombre:
+            function foo() {};
+            // o se puede usar la anotación con flecha ECMAScript 2015
+            const foo = () => {};
+
+            //https://developer.mozilla.org/es/docs/Glossary/Funci%C3%B3n
+    </script>
+</body>
+</html>

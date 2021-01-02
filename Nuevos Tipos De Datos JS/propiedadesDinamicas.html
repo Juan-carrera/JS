@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //
+        let aleatorio = Math.round(Math.random() * 100 + 5);
+        const objetouser = {
+
+            propiedad: "valor",
+            [`id_${aleatorio}`]: "valor aleatorio"
+
+        };
+
+
+        const users = ["juan","miguel","alphonse"];
+
+        users.forEach((usuario,index) => objetouser[`id_${index}`] = usuario);
+
+        console.log(objetouser);
+
+
+    </script>
+</body>
+</html>

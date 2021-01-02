@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1>Fundamentos de js</h1>
+
+    <script>
+
+        /*
+        var hola= "hola mundo";
+        let hello = "hola mundo";
+        console.log(hola);
+        console.log(hello);
+
+        //ambito de bloque
+        var musica ="rock";
+        console.log("antes del bloque",musica);
+
+        //esto es un bloque
+        {
+            var musica = 10;
+
+            console.log("el valor de la variable ahora es",musica);
+
+        }
+        console.log("el valor de la variable ahora es",musica);
+
+console.log("**************let***************");
+           //ambito de bloque
+           let musica2 ="rock";
+        console.log("antes del bloque",musica2);
+
+        //esto es un bloque
+        {
+            let musica2 = "pop";
+
+            console.log("el valor de la variable ahora es",musica2);
+            
+        }
+        console.log("antes del bloque",musica2); */
+
+        //cdenas de textos
+
+        /*let nombre = "juan";
+
+        let saludo = new String("hola mundo");
+        console.log(nombre,saludo);*/
+
+       //strings
+
+
+       /* let n = "juan";
+        let a ="carrera";
+
+        let s = "hola mi nombre es" + " " + n + " " + "y mis apellido es" + a;
+
+        console.log(s); 
+
+        //interpolar variables , template string
+
+        let s2 = `hola mi nombre es ${n} ${a}.`;
+         console.log(s2);
+
+         */
+        
+  /*      //numbers
+        let a = 2;
+
+        let b = new Number (10);
+
+
+//booleans
+
+
+let v = true;
+
+let f = false;
+
+//undefined,nan and null
+
+*/
+
+//funcion declarada
+
+/*
+
+function estoEsUnaFuncion()
+{
+  console.log("uno");
+  console.log("dos");
+}
+
+//invocacion de funcion
+
+estoEsUnaFuncion();
+
+function saludar (nombre,edad)
+{   
+    console.log(`hola mi nombre es ${nombre} y mi edad es ${edad}`);
+
+}
+
+saludar("juan antonio",23);
+
+// funciones declaradas vs funciones expresadas
+
+function funcionDeclarada()
+{
+    console.log("esto es una funcion declarada,puede invocarse en cualquier parte de nuestro codigo,incluso antes de que la funcion sea declarada");
+
+}
+
+funcionDeclarada();
+
+
+//funcion anonima
+funcionExpresad();
+
+const funcionExpresad = function (){
+console.log ("esto es una funcion expresada,una funcion que se la ha asignado como valor una variable,si invocamos esta funcion antes de su definicion,que nos dira JS...");
+
+}
+*/
+
+
+//arreglos
+/*
+const a = []
+const b = []
+
+
+*/
+
+/*
+//objetos
+const b = {
+    nombre: "juam",
+    apellido : "carrera",
+    edad: 23,
+    pasatiempo: ["correr","nadar"],
+    soltero: false,
+    contacto:{
+        email:"juan@carrera.com",
+        movil: 7331259670
+    },
+    saludar: function(){
+        console.log("hola")
+    },
+
+    decirNombre : function () {
+        console.log(`hola mi nombre es ${this.nombre} ${this.apellido} y tengo ${this.edad}`);
+    }
+}
+
+console.log(b);
+console.log(b["nombre"]);
+b.decirNombre();
+
+*/
+
+//operadores aritmeticos
+
+// + , - , / , * , %
+
+//operadores relacionales
+// =, < ,> , == , <= , >=
+
+//incremento y decremento
+
+// ++ += -= 
+
+//operador unario
+//--i ++i i++ i--
+
+//operadores logicos
+// &&=and ||=or != not
+
+//condicionales
+
+/*
+let a = 5;
+let b = 10;
+
+if (a <= 10)
+{
+    console.log ("5 es menor que 10");
+}
+else {
+    console.log("");
+}
+
+//operador ternario
+
+let mayorEdad = (a >= 10) ? "5 es menor que 10" : "10 es mayor que 5";
+
+console.log(mayorEdad);
+
+*/
+//ciclos
+//while do while for
+
+//for in for of
+
+/*
+//manejo de errores
+
+// try catch finally
+try {
+    let nu="s";
+if ( isNaN(nu)) {
+    throw new Error("el valor introdicido no es un numero");
+} 
+console.log(nu * nu);
+
+} catch (error) {
+console.log(`Error ${error}`);    
+}
+*/
+/*
+//break y continue
+
+const nume = [1,2,3,4,5,6,7,8,9];
+
+for(let i =0;i<nume.length;i++){
+
+if(i === 5)
+{
+    break;
+}
+    console.log(nume[i]);
+
+
+}
+*/
+
+//destructuracion de objetos y arreglos
+/*
+let nume = [1,2,3,4,5,6,7];
+
+const [uno,dos,tres] =  nume;
+
+console.log(uno,dos,tres);
+
+
+const persona = {
+    nombre : "juan",
+    apellido : "carrera",
+    edad : 23
+}
+let {nombre,apellido,edad} = persona;
+
+console.log(nombre,apellido,edad);
+*/
+/*
+//objetos literales
+
+let no = "haku";
+let edad = 3;
+
+const cat = {
+    no : no,
+    edad : edad,
+
+    maullar2: function (){
+        console.log("miau");
+    }
+}
+
+console.log(cat);
+
+//objetos literales ECMS 2015
+const gato = {
+    no,
+    edad,
+    raza : "gato",
+    maullar() {
+        console.log("miau,miau");
+    }
+}
+
+console.log(gato);
+
+*/
+/*
+//parametros REST y operador SPREAD
+
+function suma (a,b,...c){
+let resu = a + b;
+
+c.forEach(function(n){
+resu += n;
+});
+
+return resu;
+
+}
+
+console.log(suma(1,5));
+console.log(suma(1,5,134));
+
+
+//operador spread
+
+const un = [1,2,3,4,5],
+
+      dos =[6,7,8,9];
+
+console.log(un,dos);
+
+const tre = [un,dos];
+
+console.log(tre);
+
+const spre = [...un,...dos];
+console.log(spre);
+
+*/
+
+/*
+//arrow functions
+//funciones flecha
+
+
+const saludo = function (){
+    console.log("hola");
+}
+
+saludo();
+
+const saludo1 = nombre => console.log(`hola mi nombre es ${nombre}`);
+
+saludo1("juan");
+
+
+const salu = () => {
+    console.log("hola");
+}
+
+salu();
+
+const sumar = function (a,b) {
+    return a + b;
+}
+
+sumar(4,5);
+
+const su = (a,b) => a+b;
+
+su(10,200);
+
+const nu = [1,2,3,4,5,6,7];
+
+nu.forEach(function(el,index){
+
+console.log(`el elemento ${el} esta en la posicion ${index}`)
+
+
+});
+
+nu.forEach ((el,i) => console.log(`${el} esta en la posicion ${i}`));
+
+
+
+*/
+
+
+//POO
+
+/*
+clases - modelo a seguir
+objetos - instancia de una clase
+- atributos(es una propiedad del objeto(variables dentro del objeto)) 
+- metodos (son las acciones que un objeto puede realizar(funciones))
+
+
+*/
+
+/*
+
+
+//funcion constructura
+
+function Animal (nombre,genero) {
+
+//atributos
+this.nombre = nombre;
+
+this.genero = genero;
+
+//metodos
+this.sonar = function(){
+
+console.log("sonidos");
+
+    }
+}
+
+
+
+//funcion constructura donde asiganamos los metodos
+// al prototipo,no a la funcion como tal
+
+function Animal (nombre,genero) {
+
+//atributos
+this.nombre = nombre;
+
+this.genero = genero;
+
+
+}
+
+//metodos
+Animal.prototype.sonar = function(){
+
+console.log("sonidos");
+}
+
+
+const animal = new Animal("lola","hembra");
+console.log(animal);
+
+*/
+
+//herencia
+
+/*
+
+//clases
+
+class Animal {
+
+constructor (nombre,genero){
+this.nombre = nombre;
+this.genero = genero;
+}
+
+sonar() {
+    console.log("holaa");
+}
+
+saludar(){
+    console.log("holaaaa");
+}
+
+
+}
+
+class Perro extends Animal {
+
+
+constructor(nombre,genero,tama)
+{
+    //metodo que manda a llamar el constructor de la clases padre
+    super(nombre,genero);
+    this.tama = tama;
+    this.raza = null;
+}
+
+    sonar(){
+        console.log("soy un perro y ladro");
+    }
+
+    ladrar(){
+        console.log("guau,gua");
+    }
+
+    static queEres(){
+        console.log("soy un perro");
+    }
+
+
+    get getRaza (){
+        return this.raza;
+    }
+
+    set setRaza(raza){
+        this.raza = raza;
+    }
+
+ }
+
+
+
+const scoo = new Perro("scooby","macho","gigante");
+const mimi = new Animal("mimi","hembra");
+
+Perro.queEres(); //metodo estatico
+console.log(scoo);
+scoo.sonar();
+scoo.ladrar();
+console.log(mimi);
+
+console.log(scoo.getRaza);
+scoo.setRaza = "danes";
+console.log(scoo.getRaza);
+
+
+
+//metodos estaticos,getters y setters
+
+//metodo estatico se puede ejecutar sin la necesidad de instanciar la clase
+
+// clase.metodo estatico();
+
+//los setters y getters son metodos eseciales que nos permiten establecer y obtener valores de atributos de nuestra clase.
+
+
+*/
+
+//objeto consola
+// window objeto global de js en los navegadores que reresenta la ventana del nabegador
+
+/*
+console.log(console);
+
+console.error();
+console.warn();
+console.dir();
+
+console.table();
+
+console.group();
+console.groupEnd();
+console.clear();
+
+
+
+console.time("codigo");
+const arre = new Array(1000000);
+
+for(i =0;i < arre.length;i++){
+    arre[i] = i;
+}
+
+console.timeEnd("codigo");
+//console.table(arre);
+
+//console.count();
+
+//librerias para testing,assert podemos hacer pruebas
+let x = 3,
+    y = 2,
+    prueba= "se espera que x sea menor que y";
+
+console.assert(x < y,{x,y,prueba});
+
+*/
+
+//objeto date
+
+//console.log(Date());
+
+//let fecha = new Date();
+//console.log(fecha.getDate());
+
+//objeto math
+//objeto estatico,se invoca al prototipo
+
+
+
+//operador corto circuito
+
+/*
+cortocircuito OR: cuando el valor de la izquierda en l
+expresion siempre pueda validar a true,es el valor
+que se cargara por defecto
+
+cortocircuito AND: cuando el valor de la izquierda en la
+expresion siempre pueda validar a false,es el valor que se
+cargara por defecto
+*/
+
+//function salu (nombre){
+  //  nombre = nombre || "desconocido";
+    //console.log(`hola ${nombre}`);
+//}
+
+
+
+
+/*
+
+//alert,confirm y prompt
+//metodos para interactuar con el usuario
+//cuelgan del objeto window
+console.log(window);
+
+//window.alert("esto es un alerta");
+//window.confirm("esto es una confirmacion");
+//window.prompt("hola esto es un prompt y le permite al usuario agregar un valor");
+
+//alert("esto es un alerta");
+//confirm("esto es una confirmacion");
+//prompt("hola esto es un prompt y le permite al usuario agregar un valor");
+
+let alerta =alert("esto es un alerta");
+let confi = confirm("esto es una confirmacion");
+let pro = prompt("hola esto es un prompt y le permite al usuario agregar un valor");
+
+
+console.log(alerta);
+console.log(confi);
+console.log(pro);
+
+
+*/
+
+
+/*
+//EXPRESIONES REGULARES
+
+//secuencia de caracteres que forman un patron de busquda y se utiliza en la busqueda de patrones de cadenas de texto
+
+let cade = "lorem ipsum sjsososoos m s lorem loremsdr";
+
+//let expR = new RegExp("lorem","ig");
+
+let exp = /lorem/ig;
+
+//console.log(expR.test(cade));
+//console.log(expR.exec(cade));
+
+console.log(exp.test(cade));
+console.log(exp.exec(cade));
+
+
+*/
+
+/*
+
+//funciones anonimas autoejecutables
+
+//funcion englobamos todo el codigo a ejecutar
+
+//pasa parametros de una forma amigable
+
+
+//version clasica
+(function (d,w,c) {
+
+console.log("mi primer funcion autoejecutable");
+
+console.log(d);
+
+})(document,window,console);
+
+*/
+
+
+//modulos (import/export)
+
+
+
+</script>
+</body>
+</html>

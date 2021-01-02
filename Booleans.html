@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //un boolean es un tipo de dato primitivo que solo puede tener los valores true o false.
+
+      //booleans
+
+      let v = true;
+
+      let f = false;
+
+      //Truthy
+      /*
+         En JavaScript, un valor verdadero es un valor que se considera  true/verdadero cuando es evaluado en un contexto Booleano. Todos los valores son verdaderos a menos que se definan como falso (es decir, excepto false, 0, "", null, undefined, y NaN).
+        JavaScript usa coerción en los contextos Booleanos.
+
+        Ejemplos de valores verdaderos en JavaScript (los cuales se traducirán a verdaderos y por lo tanto ejecutarán el bloque condicional if):
+
+        if (true)
+        if ({})
+        if ([])
+        if (42)
+        if ("foo")
+        if (new Date())
+        if (-42)
+        if (3.14)
+        if (-3.14)
+        if (Infinity)
+        if (-Infinity)
+
+
+        https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+        */
+
+
+
+
+
+
+
+        //Falsy
+
+        /*falsy (sometimes written falsey) value is a value that is considered false when encountered in a Boolean context.
+
+        JavaScript uses type conversion to coerce any value to a Boolean in contexts that require it, such as conditionals and loops.
+
+        There are 8 falsy values:
+
+        false	The keyword false
+        0	The number zero
+        -0	The number negative zero
+        0n	BigInt, when used as a boolean, follows the same rule as a Number. 0n is falsy.
+        ""	
+        Empty string value
+
+        null	null - the absence of any value
+        undefined	undefined - the primitive value
+        NaN	NaN - not a number
+
+        Examples
+        Examples of falsy values in JavaScript (which are coerced to false in Boolean contexts, and thus bypass the if block):
+
+        if (false)
+        if (null)
+        if (undefined)
+        if (0)
+        if (-0)
+        if (0n)
+        if (NaN)
+        if ("")
+        The logical AND operator, &&
+        If the first object is falsy, it returns that object
+
+        false && "dog"
+        // ↪ false
+
+        0 && "dog"
+        // ↪ 0
+        
+        https://developer.mozilla.org/es/docs/Glossary/Falsy
+        */
+    </script>
+  </body>
+</html>

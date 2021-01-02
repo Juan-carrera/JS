@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        const ws = new WeakSet();
+
+
+        let valor = {"valor1": 1};
+        let valor2 = {"valor2":2};
+
+        ws.add(valor);
+        ws.add(valor2);
+
+        console.log(ws);
+
+        console.log(ws.has(valor));
+
+        ws.delete(valor);
+
+        console.log(ws);
+        */
+        
+        //weakmap
+
+        const wm = new WeakMap();
+
+        let llave1 = {};
+        let llave2 = {};
+
+
+        wm.set(llave1,15);
+        wm.set(llave2,25);
+
+        console.log(wm);
+
+        console.log(wm.has(llave2));
+
+        console.log(wm.get(llave1));
+        
+
+
+    </script>
+</body>
+</html>

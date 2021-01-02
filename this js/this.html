@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //this: palabra que hace referencia al objeto en cuestion
+
+        //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/this}
+
+
+        console.log(this);
+
+        console.log(this === window);
+
+        this.nombre = "contexto global";
+        
+        
+        function imprimir (){
+            console.log(this.nombre);
+        }
+
+        imprimir();
+
+        const obj = {
+            nombre:"contexto objeto",
+            imprimir: function(){
+                console.log(this.nombre);
+            }
+        }
+
+        obj.imprimir();
+
+        const obj2 = {
+            nombre:"contexto objeto2",
+             imprimir
+        }
+
+        obj2.imprimir();
+
+
+        const obj3 = {
+            nombre:"contexto objeto 3",
+            imprimir: () => {
+                console.log(this.nombre);
+            }
+        }
+
+        obj3.imprimir();
+
+
+        function Persona (nombre){
+            this.nombre = nombre;
+
+            //return console.log(this.nombre);
+            /*return function (){
+                console.log(this.nombre);
+            }*/
+
+            return () => console.log(this.nombre);
+        }
+        let juan = new Persona("juan");
+
+
+
+
+    </script>
+</body>
+</html>

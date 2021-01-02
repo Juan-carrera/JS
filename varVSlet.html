@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+       
+        var hola= "hola mundo";
+        let hello = "hola mundo";
+        console.log(hola);
+        console.log(hello);
+
+        //ambito de bloque
+        var musica ="rock";
+        console.log("antes del bloque",musica);
+
+        //esto es un bloque
+        {
+            var musica = 10;
+
+            console.log("el valor de la variable ahora es",musica);
+
+        }
+        console.log("el valor de la variable ahora es",musica);
+
+        console.log("**************let***************");
+           //ambito de bloque
+           let musica2 ="rock";
+        console.log("antes del bloque",musica2);
+
+        //esto es un bloque
+        {
+            let musica2 = "pop";
+
+            console.log("el valor de la variable ahora es",musica2);
+            
+        }
+        console.log("antes del bloque",musica2); 
+
+        //cadenas de textos
+
+        let nombre = "juan";
+
+        let saludo = new String("hola mundo");
+        console.log(nombre,saludo);
+</script>
+</body>
+</html>

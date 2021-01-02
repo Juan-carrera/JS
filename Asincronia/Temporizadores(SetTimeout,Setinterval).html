@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASINCRONIA EN JS</title>
+</head>
+<body>
+    <H1>ASINCRONIA EN JS</H1>
+    <script>
+        //js tiene funciones que nos permiten lanzar otras acciones despues de a ver pasado cierto tiempo
+
+        //metodos los cuales ejecutan un bloque de codigo en un intervalo de tiempo definido
+
+
+
+        console.log("inicio");
+
+        //se ejecuta solo una vez
+        setTimeout(() => {
+            console.log("Ejecutando un setTimeout,esto se ejecuta una sola vez");
+        }, 3000);
+
+        //se ejecuta n cantidad de veces
+        /*setInterval(() => {
+                console.log("Ejecutando un setInterval,esto se ejecuta n cantidad de veces");
+        }, 3000); */
+
+
+        let tempo = setInterval(() => {
+            console.log("utilizando clearTimeOut");
+        }, 5000);
+
+
+        clearTimeout();
+
+        clearInterval(tempo);
+    </script>
+</body>
+</html>

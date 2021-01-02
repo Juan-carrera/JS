@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //objetos que almacenan conjunto de valores asociados a manera de objeto
+
+        //parecido a un objeto primitivo
+        //coleccion de datos como objeto primitivo
+        //objeto iterador
+
+        //guardar datos de un catalogo,algo preestablecido
+
+    
+        let mapa = new Map();
+
+        mapa.set("nombre","juan");
+        mapa.set("apellido","carrera");
+
+        console.log(mapa);
+
+        console.log(mapa.get("nombre"));
+
+        for (let [key,value] of mapa) {
+            console.log(`llave: ${key}, Valor: ${value}`);
+        }
+
+
+        const mapa2 = new Map([
+
+            ["nombre","haku"],
+            ["edad",3],
+            ["animal","gato"]
+
+        ]);
+
+        console.log(mapa2);
+
+        const llavemap2 = [...mapa2.keys()];
+        const valoresmapa2 = [...mapa2.values()];
+        console.log(llavemap2);
+        console.log(valoresmapa2);
+
+    </script>
+</body>
+</html>

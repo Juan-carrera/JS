@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //sets
+
+        /* 
+        estructura similar a un array
+        que solo acepta valores unicos(primitivos)
+        bd de correos,listas unicas
+
+        */
+
+        const set = new Set([1,2,3,4,5,5,6,6,true,false,true,false,{},{}]);
+
+        console.log(set);
+
+
+        const set2 = new Set();
+        set2.add(1);
+        set2.add(1);
+        set2.add(4);
+        set2.add(5);
+
+        console.log(set2);
+
+        console.log("recorriendo set---------------");
+
+        for (let iterator of set) {
+            console.log(iterator);
+        }
+
+        console.log("recorriendo set2---------------");
+
+        set2.forEach(el => console.log(el));
+
+        let arr = Array.from(set);
+
+        console.log(arr);
+        console.log(arr[2]);
+    </script>
+</body>
+</html>

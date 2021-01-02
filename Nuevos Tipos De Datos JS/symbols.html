@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //tipo de dato primitivo
+        //su valor es privado y para uso interno de objetos
+        //un simbolo crea una referencia unica
+        //permiten crear identificadores unicos
+        //suelen usarse pata identificar propiedades de objetos
+        //notacion de los corchetes
+
+        let id = Symbol("id");
+        let id2 = Symbol("id2");
+
+        console.log(id,id2);
+
+        const NAME = Symbol("nombre");
+        const SALUDO = Symbol("saludo");
+
+        const persona = {
+        [NAME]: "juan"
+        }
+
+        console.log(persona);
+
+        persona.NAME = "juan antonio carrera";
+
+        console.log(persona);
+
+        console.log(persona.NAME);
+
+        console.log(persona[NAME]);
+
+        persona[SALUDO] = function() {
+            console.log("hola");
+        }
+
+        console.log(persona);
+
+        persona[SALUDO]();
+
+        for(let propie in persona){
+            console.log(propie);
+        }
+
+        console.log( Object.getOwnPropertySymbols(persona));
+
+    </script>
+</body>
+</html>

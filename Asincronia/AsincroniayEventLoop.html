@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //¿que es la sincronia?
+        /* 
+        la sincronia es un pilar de Js
+        es un lenguaje de un solo hilo,single thread
+        */
+
+        /* 
+        
+        procesamiento single thread y multi-thread
+        -hilo:unidades basicas de ejecucion de cada proceso
+
+        
+        operaciones de cpu:van a pasar mayor tiempo consumiendo los procesos de la cpu
+       
+        operaciones I / O: aquellas operaciones que pasan esperando la peticion del recurso esperado.
+
+        Operaciones concurrentes y paralelas:
+
+        concurrencia: dos o mas tareas progresan simultaneamente
+
+        paralelismo:dos o mas tareas se ejecutan al mismo tiempo
+
+
+
+        operaciones bloqueantes y no bloqueantes
+
+        aquella que no devuelve el control hasta que termina la tarea
+
+        las operaciones se ejecutan y devuelven el control al hilo principal
+
+        operaciones sincronas y asincronas
+
+
+        sincrono:espera el resultado el resultado en tiempo presente
+
+        asincrona:la respueste sucede en un futuro
+        
+
+        //herramienta LOUPE
+        http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+
+        */
+
+        /* js tiene un model asincrono y no bloqueante,con
+        un loop de eventos implementando en un solo hilo,
+        (single thread) para operaciones de entrada y salida
+        (input/output)*/
+
+        //codigo sincrono bloqueante
+
+        (() =>{
+
+        
+        console.log("codigo sincrono");
+        console.log("inicio");
+
+        function dos(){
+            console.log("dos");
+        }
+
+        function uno(){
+            console.log("uno");
+            dos();
+            console.log("tres");
+        }
+
+        uno();
+        console.log("fin");
+
+
+        })();
+
+
+
+        //codigo asincrono no bloqueante
+
+        
+        (() =>{
+
+
+        console.log("codigo asincrono");
+        console.log("inicio");
+
+        function dos(){
+            setTimeout(function(){
+                console.log("dos");
+            }, 1000);
+        }
+
+        function uno(){
+            setTimeout(function() {
+                console.log("uno");
+            }, 0);
+            dos();
+            console.log("tres");
+        }
+
+        uno();
+        console.log("fin");
+        })();
+
+    </script>
+</body>
+</html>

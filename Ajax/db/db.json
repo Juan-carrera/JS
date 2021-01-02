@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "juan antonio",
+      "apellidos": "carrera contreras",
+      "edad": 23,
+      "telefono": 7331691060
+    },
+    {
+      "id": 2,
+      "nombre": "eblin",
+      "apellidos": "carrera contreras",
+      "edad": 36,
+      "telefono": 7331258592
+    },
+    {
+      "nombre": "irma",
+      "apellidos": "contreras lagunas",
+      "edad": "58",
+      "telefono": "7331005514",
+      "id": 3
+    }
+  ]
+}

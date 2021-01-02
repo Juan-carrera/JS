@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //es un nuevo mecanismo que permite crear un objeto basado en un objeto literal inicial.
+
+        //handler-manejador
+
+        const persona = {
+            nombre:"",
+            apellido: "",
+            edad: 0
+        }
+
+        const manejador = {
+            set(obj,prop,valor){
+
+                if(Object.keys(obj).indexOf(prop) === -1){
+
+                    return console.error(`la propiedad ${prop} no existe en el objeto persona.`);
+
+                }
+
+                obj[prop] = valor;
+
+            }
+        }
+
+        const juan = new Proxy(persona,manejador);
+
+        juan.nombre = "juan antonio";
+        juan.apellido = "carrera";
+        juan.edad = 22;
+        juan.twitter = "@carrera";
+        console.log(juan);
+
+
+
+
+    </script>
+</body>
+</html>
